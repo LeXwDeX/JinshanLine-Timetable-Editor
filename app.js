@@ -33,7 +33,7 @@
   const STORAGE_KEY = "timetable_state_v1";
 
   // 方向 A 与 B 的端点与模板站序
-  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申", "上海南"];
+  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申","辛庄", "上海南"];
   const TEMPLATE_STOPS_B = [...TEMPLATE_STOPS_A].reverse();
 
   // 初始空集（用于新建/无数据时）
@@ -348,6 +348,8 @@
 
   function setCurrentDir(dir) {
     if (dir !== "A" && dir !== "B") return;
+    // 切换前先同步未失焦的编辑
+    syncEditorToState();
     state.currentDir = dir;
     state.currentIndex = -1;
     els.tabs.forEach((b) => b.classList.toggle("active", b.dataset.dir === dir));
@@ -668,6 +670,49 @@
   }
 
   // ---------------------------
+  // 将右侧编辑器未失焦的输入同步回 state（顶层字段 + 停站表）
+  // ---------------------------
+  function syncEditorToState() {
+    const data = getCurrentData();
+    const idx = state.currentIndex;
+    if (!data || idx < 0 || idx >= (data.trains || []).length) return;
+    const train = data.trains[idx];
+
+    // 顶部字段
+    if (els.trainNumber) {
+      train.trainNumber = (els.trainNumber.value || "").trim();
+    }
+    if (els.isWeekdayOnly) {
+      train.isWeekdayOnly = !!els.isWeekdayOnly.checked;
+    }
+    if (els.isDirect) {
+      const newDirect = !!els.isDirect.checked;
+      // 只同步勾选状态，不在此处做压缩/扩展，保持现有 change 逻辑的交互。
+      train.isDirect = newDirect;
+    }
+
+    // 停站表
+    const rows = Array.from(els.stopsTbody?.querySelectorAll("tr") || []);
+    rows.forEach((tr, i) => {
+      const inputs = tr.querySelectorAll("input");
+      const [inpStation, inpArr, inpDep] = inputs;
+      const s = train.stops && train.stops[i];
+      if (!s) return;
+      s.stationName = (inpStation?.value || "").trim();
+      if (i === 0) {
+        s.arrivalTime = null;
+      } else {
+        s.arrivalTime = normalizeTime(inpArr?.value ?? null);
+      }
+      if (i === rows.length - 1) {
+        s.departureTime = null;
+      } else {
+        s.departureTime = normalizeTime(inpDep?.value ?? null);
+      }
+    });
+  }
+
+  // ---------------------------
   // JSON 输出（保证键顺序与缩进）
   // ---------------------------
   function formatDatasetForSave(data) {
@@ -721,6 +766,8 @@
   }
 
   async function saveCurrentDir() {
+    // 保存前同步编辑器内容
+    syncEditorToState();
     const dir = state.currentDir;
     const data = dir === "A" ? state.A : state.B;
     // 规范化后保存
@@ -731,6 +778,8 @@
   }
 
   async function saveBoth() {
+    // 保存前同步编辑器内容
+    syncEditorToState();
     // 分别生成两个下载
     normalizeDataset(state.A);
     normalizeDataset(state.B);
@@ -766,6 +815,8 @@
 
     // 新建车次
     els.btnAddTrain.addEventListener("click", () => {
+      // 新建前先提交当前编辑，避免丢输入
+      syncEditorToState();
       pushHistory();
       const data = getCurrentData();
       const endpoints = getEndpointsForCurrentDir();
@@ -785,10 +836,17 @@
       state.currentIndex = data.trains.length - 1;
       renderAll();
       persistToLocal();
+      // 新建后自动聚焦到车次号
+      setTimeout(() => {
+        els.trainNumber?.focus?.();
+        els.trainNumber?.select?.();
+      }, 0);
     });
 
     // 添加停站（在末站前插入）
     els.btnAddStop.addEventListener("click", () => {
+      // 修改结构前先提交当前编辑
+      syncEditorToState();
       const data = getCurrentData();
       const idx = state.currentIndex;
       if (idx < 0) return;
@@ -807,6 +865,8 @@
 
     // 常用站模板（端点固定，中间填充模板）
     els.btnAddTemplateStops.addEventListener("click", () => {
+      // 修改结构前先提交当前编辑
+      syncEditorToState();
       const data = getCurrentData();
       const idx = state.currentIndex;
       if (idx < 0) return;
@@ -827,13 +887,21 @@
     });
 
     // 车次顶部字段
-    els.trainNumber.addEventListener("change", () => {
+    // 实时刷新左侧列表，但不加入历史，避免击键过多历史点
+    els.trainNumber.addEventListener("input", () => {
+      const data = getCurrentData();
+      const idx = state.currentIndex;
+      if (idx < 0) return;
+      data.trains[idx].trainNumber = els.trainNumber.value.trim();
+      renderTrainList();
+    });
+    // 结束编辑时再入历史并持久化
+    els.trainNumber.addEventListener("blur", () => {
       const data = getCurrentData();
       const idx = state.currentIndex;
       if (idx < 0) return;
       pushHistory();
       data.trains[idx].trainNumber = els.trainNumber.value.trim();
-      renderTrainList();
       persistToLocal();
     });
 
@@ -936,8 +1004,10 @@
 
     // 校验/规范化
     els.btnValidate.addEventListener("click", () => {
+      // 先同步未失焦输入
+      syncEditorToState();
       const data = getCurrentData();
-      // 先规范化当前方向
+      // 规范化当前方向
       pushHistory();
       normalizeDataset(data);
       renderAll();
