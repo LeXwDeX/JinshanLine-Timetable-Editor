@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>金山铁路时刻表编辑器（本地版）</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- 轻量依赖：dayjs + 自由解析格式插件（用于 HH:mm / HH:mm:ss 解析与比较） -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+  <script>
+    // 启用 dayjs 插件
+    dayjs.extend(window.dayjs_plugin_customParseFormat);
+  </script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>金山铁路时刻表编辑器（本地版）</h1>
+    <div class="toolbar">
+      <button id="btnLoadSamples" title="加载内置示例数据">加载示例</button>
+
+      <label class="file-input">
+        <input id="fileInput" type="file" accept=".json" multiple />
+        导入 JSON…
+      </label>
+
+      <button id="btnValidate" title="执行校验并可进行规范化">校验/规范化</button>
+
+      <div class="divider"></div>
+
+      <button id="btnSaveA" title="保存/导出 当前方向（左侧TAB所选）的 JSON">保存当前方向</button>
+      <button id="btnSaveBoth" title="分别导出两个方向为 JSON">导出两个方向</button>
+
+      <div class="divider"></div>
+
+      <button id="btnUndo" title="撤销 (Ctrl/⌘+Z)">撤销</button>
+      <button id="btnRedo" title="重做 (Ctrl/⌘+Y 或 Ctrl/⌘+Shift+Z)">重做</button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="left-pane">
+      <div class="tabs">
+        <button class="tab active" data-dir="A">金山卫 → 上海南</button>
+        <button class="tab" data-dir="B">上海南 → 金山卫</button>
+      </div>
+
+      <div class="meta">
+        <div class="meta-row">
+          <label>version</label>
+          <input id="metaVersion" type="text" placeholder="例如 1.0" />
+        </div>
+        <div class="meta-row">
+          <label>validity</label>
+          <input id="metaValidity" type="text" placeholder="例如 2022-12-29 to 2023-01-05" />
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="搜索车次号（如 S1601）" />
+        <button id="btnAddTrain">新建车次</button>
+      </div>
+
+      <ul id="trainList" class="train-list" aria-label="车次列表">
+        <!-- 车次项（由 JS 渲染） -->
+      </ul>
+    </section>
+
+    <section class="right-pane">
+      <div id="emptyHint" class="empty-hint">
+        请选择左侧的车次，或点击“新建车次”创建。
+      </div>
+
+      <div id="trainEditor" class="train-editor hidden">
+        <div class="form-row">
+          <label>车次号</label>
+          <input id="trainNumber" type="text" placeholder="如 S1601" />
+          <label class="checkbox">
+            <input id="isWeekdayOnly" type="checkbox" />
+            工作日开行
+          </label>
+          <label class="checkbox">
+            <input id="isDirect" type="checkbox" />
+            直达（仅两站）
+          </label>
+        </div>
+
+        <div class="stops-header">
+          <h3>停站表</h3>
+          <div class="stop-actions">
+            <button id="btnAddStop">添加停站</button>
+            <button id="btnAddTemplateStops" title="快速插入常用站序">常用站模板</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="stops-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">站名</th>
+                <th style="width: 22%;">到达时间</th>
+                <th style="width: 22%;">发车时间</th>
+                <th style="width: 30%;">操作</th>
+              </tr>
+            </thead>
+            <tbody id="stopsTbody">
+              <!-- 停站行（由 JS 渲染） -->
+            </tbody>
+          </table>
+        </div>
+
+        <div id="validatePanel" class="validate-panel">
+          <!-- 校验消息（由 JS 渲染） -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>
+      纯本地运行，无后端。Chrome/Edge 可尝试“直接写回文件”（File System Access API），
+      其他浏览器将自动降级为下载导出。
+    </small>
+  </footer>
+
+  <!-- 逻辑脚本 -->
+  <script src="app.js"></script>
+</body>
+</html>
