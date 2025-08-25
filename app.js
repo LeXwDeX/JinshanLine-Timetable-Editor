@@ -201,6 +201,29 @@
   }
 
   // ---------------------------
+  // 宽松时间解析与数值范围校验（新增）
+  // ---------------------------
+  function parseHmsLoose(str) {
+    if (typeof str !== "string") return null;
+    const t = str.trim();
+    const m = t.match(/^(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?$/);
+    if (!m) return null;
+    return {
+      h: parseInt(m[1], 10),
+      m: parseInt(m[2], 10),
+      s: m[3] != null ? parseInt(m[3], 10) : null,
+    };
+  }
+
+  function isHmsInRange(c) {
+    if (!c) return false;
+    if (c.h < 0 || c.h > 23) return false;
+    if (c.m < 0 || c.m > 59) return false;
+    if (c.s != null && (c.s < 0 || c.s > 59)) return false;
+    return true;
+  }
+
+  // ---------------------------
   // 校验规则（方案 A）
   // ---------------------------
   function validateTrain(train) {
@@ -239,10 +262,28 @@
 
       // 到达/发车接收 null 或 "HH:mm:ss"。其他字符串提示错误
       if (typeof at === "string" && !dayjs(at, "HH:mm:ss", true).isValid()) {
-        msgs.push({ type: "error", text: `第 ${idx + 1} 站：到达时间格式无效（需 HH:mm:ss 或留空）。` });
+        const loose = parseHmsLoose(at);
+        if (loose) {
+          if (!isHmsInRange(loose)) {
+            msgs.push({ type: "warn", text: `第 ${idx + 1} 站：到达时间数值越界（小时0-23，分0-59，秒0-59）。` });
+          } else {
+            // 可被宽松解析且数值在范围内，交由规范化流程处理
+          }
+        } else {
+          msgs.push({ type: "error", text: `第 ${idx + 1} 站：到达时间格式无效（需 HH:mm 或 HH:mm:ss 或留空）。` });
+        }
       }
       if (typeof dt === "string" && !dayjs(dt, "HH:mm:ss", true).isValid()) {
-        msgs.push({ type: "error", text: `第 ${idx + 1} 站：发车时间格式无效（需 HH:mm:ss 或留空）。` });
+        const loose = parseHmsLoose(dt);
+        if (loose) {
+          if (!isHmsInRange(loose)) {
+            msgs.push({ type: "warn", text: `第 ${idx + 1} 站：发车时间数值越界（小时0-23，分0-59，秒0-59）。` });
+          } else {
+            // 可被宽松解析且数值在范围内，交由规范化流程处理
+          }
+        } else {
+          msgs.push({ type: "error", text: `第 ${idx + 1} 站：发车时间格式无效（需 HH:mm 或 HH:mm:ss 或留空）。` });
+        }
       }
 
       // 中间站仅到/仅发 -> 警告（允许）
