@@ -128,6 +128,7 @@
       width: 100%;
       border-collapse: collapse;
       background: var(--panel-2);
+      table-layout: fixed;
     }
 
     .board-table thead th {
@@ -166,6 +167,8 @@
 
     .board-body {
       overflow: auto; /* 独立滚动区域 */
+      /* 使滚动条出现/消失时预留空间，避免宽度抖动导致列起始位置变化 */
+      scrollbar-gutter: stable both-edges;
     }
 
     .board-table tbody td {
@@ -223,6 +226,30 @@
       color: var(--muted);
       font-size: 14px;
     }
+    /* PC端固定“始发站/终到站”同宽，并处理溢出 */
+    :root { --station-col-width-pc: 160px; } /* 可按需改为 140/180px */
+
+    @media (min-width: 1024px) {
+      /* 第4、5列（始发站、终到站）设置相同固定宽度 */
+      .board-table col:nth-child(4),
+      .board-table col:nth-child(5) {
+        width: var(--station-col-width-pc);
+      }
+
+      /* 使表头宽度与列宽一致（增强一致性） */
+      .board-table thead th:nth-child(4),
+      .board-table thead th:nth-child(5) {
+        width: var(--station-col-width-pc);
+      }
+
+      /* 内容过长时省略，避免撑开 */
+      .board-table tbody td:nth-child(4),
+      .board-table tbody td:nth-child(5) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   </style>
 </head>
 <body class="board-page">
@@ -247,32 +274,40 @@
 
   <main class="board-main">
     <div class="board-table-wrap" aria-label="时刻表">
-      <table class="board-table">
-        <thead>
-          <tr>
-            <th class="sortable" data-key="dep">
-              发车时间<span class="sort-arrow"></span>
-            </th>
-            <th class="sortable" data-key="trainNumber">
-              车次<span class="sort-arrow"></span>
-            </th>
-            <th>类型</th>
-            <th>始发站</th>
-            <th>终到站</th>
-            <th class="sortable" data-key="arr">
-              到达时间<span class="sort-arrow"></span>
-            </th>
-            <th class="sortable td-center" data-key="stopsCount">
-              站数<span class="sort-arrow"></span>
-            </th>
-            <th class="sortable td-right" data-key="duration">
-              总用时<span class="sort-arrow"></span>
-            </th>
-          </tr>
-        </thead>
-      </table>
       <div class="board-body">
         <table class="board-table" aria-label="车次列表">
+          <colgroup>
+            <col style="width: 100px" />
+            <col style="width: 110px" />
+            <col style="width: 80px" />
+            <col />
+            <col />
+            <col style="width: 100px" />
+            <col style="width: 64px" />
+            <col style="width: 120px" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="sortable" data-key="dep">
+                发车时间<span class="sort-arrow"></span>
+              </th>
+              <th class="sortable" data-key="trainNumber">
+                车次<span class="sort-arrow"></span>
+              </th>
+              <th>类型</th>
+              <th>始发站</th>
+              <th>终到站</th>
+              <th class="sortable" data-key="arr">
+                到达时间<span class="sort-arrow"></span>
+              </th>
+              <th class="sortable td-center" data-key="stopsCount">
+                站数<span class="sort-arrow"></span>
+              </th>
+              <th class="sortable td-right" data-key="duration">
+                总用时<span class="sort-arrow"></span>
+              </th>
+            </tr>
+          </thead>
           <tbody id="tbody">
             <tr><td class="empty-hint td-center" colspan="8">请使用“导入数据…”选择两份 JSON 文件。</td></tr>
           </tbody>
