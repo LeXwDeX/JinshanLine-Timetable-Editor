@@ -960,11 +960,11 @@
         persistToLocal();
         alert("示例数据已加载。");
       } catch (e) {
-        alert("无法直接读取本地示例文件（浏览器限制）。请使用“导入 JSON…”按钮选择这两个 .json 文件导入。");
+        alert("无法直接读取本地示例文件（浏览器限制）。请使用“导入数据…”按钮选择这两个 .json 文件导入。");
       }
     });
 
-    // 导入 JSON（支持多选）
+    // 导入数据（支持多选）
     els.fileInput.addEventListener("change", async (evt) => {
       const files = Array.from(evt.target.files || []);
       if (!files.length) return;

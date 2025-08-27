@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>金山铁路时刻表（展示版）</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- 依赖：dayjs + 自由解析格式插件（用于 HH:mm / HH:mm:ss 解析与比较） -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+  <script>
+    dayjs.extend(window.dayjs_plugin_customParseFormat);
+  </script>
+
+  <style>
+    /* 展示页专属样式（复用 styles.css 变量） */
+    .board-page {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .board-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 12px 16px;
+      background: linear-gradient(180deg, #121620, #0f1115 80%);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 6px 16px var(--shadow);
+    }
+
+    .board-header h1 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .board-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .board-toolbar .tabs {
+      display: inline-flex;
+      gap: 6px;
+    }
+
+    .board-toolbar .tab {
+      background: var(--panel-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all .15s ease;
+    }
+    .board-toolbar .tab.active {
+      background: #222634;
+      border-color: #3a4152;
+      box-shadow: inset 0 -2px 0 var(--accent);
+      font-weight: 600;
+    }
+
+    .board-toolbar .file-input {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: all .15s ease;
+      font-size: 13px;
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .board-toolbar .file-input:hover {
+      background: var(--panel-2);
+      border-color: #3a4152;
+    }
+    .board-toolbar .file-input input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .board-toolbar .divider {
+      width: 1px;
+      height: 28px;
+      background: var(--border);
+      margin: 0 4px;
+    }
+
+    .board-toolbar .stats {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .board-main {
+      padding: 12px 12px 16px 12px;
+      overflow: hidden; /* 内部容器滚动 */
+    }
+
+    .board-table-wrap {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 12px 24px var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-height: 480px;
+      max-height: calc(100vh - 180px); /* 留出 header/footer 空间 */
+      overflow: hidden;
+    }
+
+    .board-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel-2);
+    }
+
+    .board-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--muted);
+      background: #151923;
+      padding: 10px;
+      border-bottom: 1px solid var(--border);
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .board-table thead th.sortable {
+      cursor: pointer;
+    }
+    .board-table thead th.sortable:hover {
+      color: var(--text);
+      background: #1b2030;
+    }
+    .board-table thead th .sort-arrow {
+      margin-left: 6px;
+      opacity: .7;
+      font-size: 11px;
+    }
+    .board-table thead th.sorted-asc .sort-arrow::after {
+      content: "▲";
+    }
+    .board-table thead th.sorted-desc .sort-arrow::after {
+      content: "▼";
+    }
+
+    .board-body {
+      overflow: auto; /* 独立滚动区域 */
+    }
+
+    .board-table tbody td {
+      padding: 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      font-size: 13px;
+    }
+
+    .td-train {
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: .2px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--panel-2);
+    }
+    .badge.direct { color: #a8ffb0; border-color: rgba(123,211,137,0.35); background: rgba(123,211,137,0.08); }
+    .badge.via    { color: #c0c7d8; border-color: rgba(192,199,216,0.25); background: rgba(192,199,216,0.06); }
+
+    .td-dim {
+      color: var(--muted);
+    }
+
+    .td-center {
+      text-align: center;
+    }
+
+    .td-right {
+      text-align: right;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .board-footer {
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      color: var(--muted);
+      background: #121620;
+      font-size: 12px;
+    }
+
+    .empty-hint {
+      padding: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body class="board-page">
+  <header class="board-header">
+    <h1>金山铁路时刻表（展示版）</h1>
+    <div class="board-toolbar">
+      <div class="tabs" role="tablist" aria-label="方向切换">
+        <button class="tab active" data-dir="A" role="tab" aria-selected="true">金山卫 → 上海南</button>
+        <button class="tab" data-dir="B" role="tab" aria-selected="false">上海南 → 金山卫</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <label class="file-input" aria-label="导入数据（JSON）">
+        <input id="fileInput" type="file" accept=".json" multiple />
+        导入数据…
+      </label>
+
+      <div class="stats" id="statsText">尚未加载数据</div>
+    </div>
+  </header>
+
+  <main class="board-main">
+    <div class="board-table-wrap" aria-label="时刻表">
+      <table class="board-table">
+        <thead>
+          <tr>
+            <th class="sortable" data-key="dep">
+              发车时间<span class="sort-arrow"></span>
+            </th>
+            <th class="sortable" data-key="trainNumber">
+              车次<span class="sort-arrow"></span>
+            </th>
+            <th>类型</th>
+            <th>始发站</th>
+            <th>终到站</th>
+            <th class="sortable" data-key="arr">
+              到达时间<span class="sort-arrow"></span>
+            </th>
+            <th class="sortable td-center" data-key="stopsCount">
+              站数<span class="sort-arrow"></span>
+            </th>
+            <th class="sortable td-right" data-key="duration">
+              总用时<span class="sort-arrow"></span>
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <div class="board-body">
+        <table class="board-table" aria-label="车次列表">
+          <tbody id="tbody">
+            <tr><td class="empty-hint td-center" colspan="8">请使用“导入数据…”选择两份 JSON 文件。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="board-footer">
+    <small>
+      纯本地运行，无后端。仅支持通过“导入数据…”加载 JSON；深色主题与编辑器一致。
+    </small>
+  </footer>
+
+  <!-- 展示逻辑 -->
+  <script src="display.js"></script>
+</body>
+</html>
