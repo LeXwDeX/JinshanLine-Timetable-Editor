@@ -48,7 +48,9 @@
 
     .board-toolbar .tabs {
       display: inline-flex;
+      align-items: center;
       gap: 6px;
+      padding: 0; /* 覆盖全局 .tabs 的 padding，避免导致两侧按钮垂直不齐 */
     }
 
     .board-toolbar .tab {
@@ -56,24 +58,37 @@
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 8px 10px;
+      height: 34px;
+      padding: 0 10px;
+      line-height: 1;
+      box-sizing: border-box;
+      border-bottom: 2px solid transparent; /* 预留选中态底边，不改变整体高度 */
       cursor: pointer;
       font-size: 13px;
       transition: all .15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
     .board-toolbar .tab.active {
       background: #222634;
       border-color: #3a4152;
-      box-shadow: inset 0 -2px 0 var(--accent);
+      box-shadow: none;                 /* 去除 inset 底线带来的视觉偏移 */
+      border-bottom-color: var(--accent); /* 统一选中态底边 */
       font-weight: 600;
     }
 
     .board-toolbar .file-input {
-      background: var(--panel);
+      background: var(--panel-2);
       color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 8px 12px;
+      border-radius: 8px;
+      height: 34px;
+      padding: 0 10px;
+      line-height: 1;
+      box-sizing: border-box;
+      border-bottom: 2px solid transparent; /* 与 .tab 完全一致的高度/底边参照 */
       cursor: pointer;
       transition: all .15s ease;
       font-size: 13px;
@@ -81,6 +96,7 @@
       overflow: hidden;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
     }
     .board-toolbar .file-input:hover {
@@ -230,25 +246,67 @@
     :root { --station-col-width-pc: 160px; } /* 可按需改为 140/180px */
 
     @media (min-width: 1024px) {
-      /* 第4、5列（始发站、终到站）设置相同固定宽度 */
+      /* 第4、6列（始发站、终到站）设置相同固定宽度 */
       .board-table col:nth-child(4),
-      .board-table col:nth-child(5) {
+      .board-table col:nth-child(6) {
         width: var(--station-col-width-pc);
       }
 
       /* 使表头宽度与列宽一致（增强一致性） */
       .board-table thead th:nth-child(4),
-      .board-table thead th:nth-child(5) {
+      .board-table thead th:nth-child(6) {
         width: var(--station-col-width-pc);
       }
 
       /* 内容过长时省略，避免撑开 */
       .board-table tbody td:nth-child(4),
-      .board-table tbody td:nth-child(5) {
+      .board-table tbody td:nth-child(6) {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
+    }
+    /* 途径站列居中 */
+    .board-table thead th:nth-child(5) { text-align: center; }
+    .board-table tbody td:nth-child(5) { text-align: center; }
+    /* 站数/总用时 列表头对齐（文本与下方单元格对齐） */
+    .board-table thead th:nth-child(8) { text-align: center; position: relative; padding-right: 14px; }
+    .board-table thead th:nth-child(9) { text-align: right;  position: relative; padding-right: 14px; }
+    /* 将排序箭头绝对定位到最右侧，不参与文本对齐计算 */
+    .board-table thead th:nth-child(8) .sort-arrow,
+    .board-table thead th:nth-child(9) .sort-arrow { position: absolute; right: 0; margin-left: 0; }
+
+    /* 途径站固定格子样式 */
+    .td-via { /* 复用表格 td 的 padding，无需额外调整 */ }
+
+    .via-grid {
+      display: grid;
+      gap: 6px;
+    }
+
+    .via-slot {
+      display: block;
+      text-align: center;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 11px;
+      line-height: 1.4;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--panel-2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .via-slot.on {
+      color: #c0c7d8;
+      border-color: rgba(192,199,216,0.25);
+      background: rgba(192,199,216,0.06);
+    }
+
+    .via-slot.off {
+      visibility: hidden; /* 隐藏内容但保留占位，保持固定格子 */
     }
   </style>
 </head>
@@ -281,6 +339,7 @@
             <col style="width: 110px" />
             <col style="width: 80px" />
             <col />
+            <col style="width: 400px" />
             <col />
             <col style="width: 100px" />
             <col style="width: 64px" />
@@ -296,6 +355,7 @@
               </th>
               <th>类型</th>
               <th>始发站</th>
+              <th>途径站</th>
               <th>终到站</th>
               <th class="sortable" data-key="arr">
                 到达时间<span class="sort-arrow"></span>
@@ -309,7 +369,7 @@
             </tr>
           </thead>
           <tbody id="tbody">
-            <tr><td class="empty-hint td-center" colspan="8">请使用“导入数据…”选择两份 JSON 文件。</td></tr>
+            <tr><td class="empty-hint td-center" colspan="9">请使用“导入数据…”选择两份 JSON 文件。</td></tr>
           </tbody>
         </table>
       </div>

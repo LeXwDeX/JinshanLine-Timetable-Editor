@@ -16,7 +16,7 @@
   // ---------------------------
   // 常量与状态
   // ---------------------------
-  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申", "辛庄", "上海南"];
+  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申", "上海南"];
   const TEMPLATE_STOPS_B = [...TEMPLATE_STOPS_A].reverse();
 
   const state = {
@@ -114,6 +114,20 @@
     return `${m} 分`;
   }
 
+  // 途径站模板与校验
+  function getTemplateStops() {
+    return state.currentDir === "A" ? TEMPLATE_STOPS_A : TEMPLATE_STOPS_B;
+  }
+  function getViaTemplate() {
+    const tpl = getTemplateStops();
+    return Array.isArray(tpl) ? tpl.slice(1, -1) : [];
+  }
+  function isTimeValid(t) {
+    if (!t || typeof t !== "string") return false;
+    const d = dayjs(t, "HH:mm:ss", true);
+    return d.isValid();
+  }
+
   // ---------------------------
   // 派生行与排序
   // ---------------------------
@@ -123,7 +137,7 @@
 
   function deriveRows(dataset) {
     if (!dataset || !Array.isArray(dataset.trains)) return [];
-    return dataset.trains.map((t) => {
+    return dataset.trains.map((t, _idx) => {
       const stops = Array.isArray(t.stops) ? t.stops : [];
       const first = stops[0] || {};
       const last = stops[stops.length - 1] || {};
@@ -145,6 +159,7 @@
         arrMin,
         stopsCount: stops.length,
         duration: duration != null && duration >= 0 ? duration : null,
+        _idx,
       };
     });
   }
@@ -241,7 +256,7 @@
   function renderTable() {
     const data = getCurrentData();
     if (!data || !Array.isArray(data.trains) || data.trains.length === 0) {
-      els.tbody.innerHTML = `<tr><td class="empty-hint td-center" colspan="8">当前方向暂无数据，请导入 JSON。</td></tr>`;
+      els.tbody.innerHTML = `<tr><td class="empty-hint td-center" colspan="9">当前方向暂无数据，请导入 JSON。</td></tr>`;
       return;
     }
 
@@ -255,12 +270,39 @@
         : '<span class="badge via">经停</span>';
       const durationTxt = formatDuration(r.duration);
 
+      // 构建固定格子的途径站（不含首末）
+      const templateStops = getViaTemplate();
+      const t = data.trains[r._idx] || {};
+      const stopsArr = Array.isArray(t.stops) ? t.stops : [];
+      const stopMap = new Map(stopsArr.map(s => [ (s.stationName || "").trim(), s ]));
+
+      let viaSpans = templateStops.map((name) => {
+        const key = (name || "").trim();
+        const s = stopMap.get(key);
+        const arr = s ? s.arrivalTime : null;
+        const dep = s ? s.departureTime : null;
+        const present = (isTimeValid(arr) || isTimeValid(dep)) && !r.isDirect;
+
+        const arrTxt2 = formatTimeShort(arr);
+        const depTxt2 = formatTimeShort(dep);
+        const titleParts = [];
+        if (arrTxt2 !== "—") titleParts.push(`到:${arrTxt2}`);
+        if (depTxt2 !== "—") titleParts.push(`发:${depTxt2}`);
+        const title = titleParts.length ? `${key} ${titleParts.join(" ")}` : `${key}`;
+
+        const cls = present ? "via-slot on" : "via-slot off";
+        return `<span class="${cls}" title="${escapeHtml(title)}" aria-hidden="${present ? "false" : "true"}">${escapeHtml(key)}</span>`;
+      });
+      const gridStyle = `grid-template-columns: repeat(${templateStops.length}, minmax(0, 1fr));`;
+      const viaHtml = `<div class="via-grid" style="${gridStyle}">${viaSpans.join("")}</div>`;
+
       html += `
         <tr>
           <td>${depTxt}</td>
           <td class="td-train">${escapeHtml(r.trainNumber || "")}</td>
           <td>${typeHtml}</td>
           <td>${escapeHtml(r.startName || "")}</td>
+          <td class="td-via">${viaHtml}</td>
           <td>${escapeHtml(r.endName || "")}</td>
           <td>${arrTxt}</td>
           <td class="td-center">${Number.isFinite(r.stopsCount) ? r.stopsCount : "—"}</td>
