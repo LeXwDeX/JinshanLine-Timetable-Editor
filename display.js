@@ -25,6 +25,9 @@
     currentDir: "A",
     sort: { by: "dep", order: "asc" }, // by: dep|trainNumber|arr|stopsCount|duration
   };
+  const STORAGE_KEY = "jsRailDisplayState";
+  const SORTABLE_COLUMNS = ["dep", "trainNumber", "arr", "stopsCount", "duration"];
+  let storageAvailable = true;
 
   // ---------------------------
   // 工具函数（只读版）
@@ -126,6 +129,58 @@
     if (!t || typeof t !== "string") return false;
     const d = dayjs(t, "HH:mm:ss", true);
     return d.isValid();
+  }
+
+  function persistState() {
+    if (!storageAvailable) return;
+    try {
+      const payload = {
+        version: 1,
+        savedAt: Date.now(),
+        A: state.A,
+        B: state.B,
+        currentDir: state.currentDir,
+        sort: state.sort,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch (err) {
+      storageAvailable = false;
+      console.warn("持久化展示数据失败", err);
+    }
+  }
+
+  function restoreState() {
+    if (!storageAvailable) return;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const payload = JSON.parse(raw);
+      if (!payload || typeof payload !== "object") return;
+      if (payload.A && Array.isArray(payload.A.trains)) {
+        state.A = payload.A;
+        normalizeDataset(state.A);
+      }
+      if (payload.B && Array.isArray(payload.B.trains)) {
+        state.B = payload.B;
+        normalizeDataset(state.B);
+      }
+      if (payload.currentDir === "A" || payload.currentDir === "B") {
+        state.currentDir = payload.currentDir;
+      }
+      if (payload.sort && typeof payload.sort === "object") {
+        const by = SORTABLE_COLUMNS.includes(payload.sort.by) ? payload.sort.by : "dep";
+        const order = payload.sort.order === "desc" ? "desc" : "asc";
+        state.sort = { by, order };
+      }
+    } catch (err) {
+      console.warn("恢复本地展示数据失败", err);
+      if (!err || err.name !== "SyntaxError") {
+        storageAvailable = false;
+      }
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (_) {}
+    }
   }
 
   // ---------------------------
@@ -306,7 +361,7 @@
           <td>${escapeHtml(r.endName || "")}</td>
           <td>${arrTxt}</td>
           <td class="td-center">${Number.isFinite(r.stopsCount) ? r.stopsCount : "—"}</td>
-          <td class="td-right">${durationTxt}</td>
+          <td class="td-center">${durationTxt}</td>
         </tr>
       `;
     }
@@ -339,6 +394,7 @@
         const dir = b.dataset.dir === "B" ? "B" : "A";
         if (state.currentDir !== dir) {
           state.currentDir = dir;
+          persistState();
           renderAll();
         }
       });
@@ -355,6 +411,7 @@
           state.sort.by = key;
           state.sort.order = key === "trainNumber" ? "asc" : "asc";
         }
+        persistState();
         renderAll();
       });
     });
@@ -392,6 +449,7 @@
 
       // 清空选择，便于重复导入相同文件
       evt.target.value = "";
+      persistState();
       renderAll();
     });
   }
@@ -400,6 +458,7 @@
   // 启动
   // ---------------------------
   function init() {
+    restoreState();
     bindUI();
     renderAll();
   }
