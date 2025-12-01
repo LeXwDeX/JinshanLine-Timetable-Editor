@@ -1,2 +1,4 @@
 # Ignore product documents directory in repo root
 /产品文档/
+/openspec/
+*.log

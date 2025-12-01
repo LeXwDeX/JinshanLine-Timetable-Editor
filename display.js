@@ -16,7 +16,7 @@
   // ---------------------------
   // 常量与状态
   // ---------------------------
-  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申", "上海南"];
+  const TEMPLATE_STOPS_A = ["金山卫", "金山园区", "亭林", "叶榭", "车墩", "新桥", "春申", "辛庄", "上海南"];
   const TEMPLATE_STOPS_B = [...TEMPLATE_STOPS_A].reverse();
 
   const state = {
@@ -348,8 +348,7 @@
         const cls = present ? "via-slot on" : "via-slot off";
         return `<span class="${cls}" title="${escapeHtml(title)}" aria-hidden="${present ? "false" : "true"}">${escapeHtml(key)}</span>`;
       });
-      const gridStyle = `grid-template-columns: repeat(${templateStops.length}, minmax(0, 1fr));`;
-      const viaHtml = `<div class="via-grid" style="${gridStyle}">${viaSpans.join("")}</div>`;
+      const viaHtml = `<div class="via-grid">${viaSpans.join("")}</div>`;
 
       html += `
         <tr>

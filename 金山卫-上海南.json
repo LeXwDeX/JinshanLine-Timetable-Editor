@@ -1,1980 +1,1985 @@
 {
-    "version": "1.0",
-    "validity": "2022-12-29 to 2023-01-05",
-    "trains": [
+  "version": "1.0",
+  "validity": "2022-12-29 to 2023-01-05",
+  "trains": [
+    {
+      "trainNumber": "S1602",
+      "isWeekdayOnly": false,
+      "stops": [
         {
-            "trainNumber": "S1602",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "05:46:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "05:46:00",
-                    "departureTime": "05:56:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "05:56:00",
-                    "departureTime": "06:03:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "06:03:00",
-                    "departureTime": "06:10:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "06:10:00",
-                    "departureTime": "06:18:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "06:18:00",
-                    "departureTime": "06:26:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "06:26:00",
-                    "departureTime": "06:34:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "06:34:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "05:46:00"
         },
         {
-            "trainNumber": "S1602",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "05:57:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "05:57:00",
-                    "departureTime": "06:04:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "06:04:00",
-                    "departureTime": "06:11:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "06:11:00",
-                    "departureTime": "06:19:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "06:19:00",
-                    "departureTime": "06:27:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "06:27:00",
-                    "departureTime": "06:35:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "06:35:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "金山园区",
+          "arrivalTime": "05:46:00",
+          "departureTime": "05:56:00"
         },
         {
-            "trainNumber": "S1604",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "06:13:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "06:13:00",
-                    "departureTime": "06:23:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "06:23:00",
-                    "departureTime": "06:30:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "06:30:00",
-                    "departureTime": "06:37:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "06:37:00",
-                    "departureTime": "06:45:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "06:45:00",
-                    "departureTime": "06:53:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "06:53:00",
-                    "departureTime": "07:01:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "07:01:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "亭林",
+          "arrivalTime": "05:56:00",
+          "departureTime": "06:03:00"
         },
         {
-            "trainNumber": "S1604",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "06:24:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "06:24:00",
-                    "departureTime": "06:31:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "06:31:00",
-                    "departureTime": "06:38:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "06:38:00",
-                    "departureTime": "06:46:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "06:46:00",
-                    "departureTime": "06:54:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "06:54:00",
-                    "departureTime": "07:02:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "07:02:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "叶榭",
+          "arrivalTime": "06:03:00",
+          "departureTime": "06:10:00"
         },
         {
-            "trainNumber": "S1004",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "06:58:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "06:58:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "车墩",
+          "arrivalTime": "06:10:00",
+          "departureTime": "06:18:00"
         },
         {
-            "trainNumber": "S1006",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "07:13:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "07:13:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "新桥",
+          "arrivalTime": "06:18:00",
+          "departureTime": "06:26:00"
         },
         {
-            "trainNumber": "S1642",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "07:35:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "07:35:00",
-                    "departureTime": "07:42:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "07:42:00",
-                    "departureTime": "07:51:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "07:51:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "春申",
+          "arrivalTime": "06:26:00",
+          "departureTime": "06:34:00"
         },
         {
-            "trainNumber": "S1642",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "07:44:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "07:44:00",
-                    "departureTime": "07:52:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "07:52:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "辛庄",
+          "arrivalTime": "06:35:00",
+          "departureTime": "06:36:00"
         },
         {
-            "trainNumber": "S1640",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "07:41"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "07:41",
-                    "departureTime": "07:51:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "07:51:00",
-                    "departureTime": "07:58:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "07:58:00",
-                    "departureTime": "08:05:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "08:05:00",
-                    "departureTime": "08:14:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "08:14:00",
-                    "departureTime": "08:22:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "08:22:00",
-                    "departureTime": "08:31:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "08:31:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1640",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "07:52:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "07:52:00",
-                    "departureTime": "07:59:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "07:59:00",
-                    "departureTime": "08:07:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "08:07:00",
-                    "departureTime": "08:15:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "08:15:00",
-                    "departureTime": "08:24:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "08:24:00",
-                    "departureTime": "08:32:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "08:32:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1608",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "07:55"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "07:55",
-                    "departureTime": "08:05:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "08:05:00",
-                    "departureTime": "08:12:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "08:12:00",
-                    "departureTime": "08:19:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "08:19:00",
-                    "departureTime": "08:27:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "08:27:00",
-                    "departureTime": "08:35:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "08:35:00",
-                    "departureTime": "08:46:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "08:46:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1608",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "08:06:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "08:06:00",
-                    "departureTime": "08:13:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "08:13:00",
-                    "departureTime": "08:20:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "08:20:00",
-                    "departureTime": "08:28:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "08:28:00",
-                    "departureTime": "08:37:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "08:37:00",
-                    "departureTime": "08:47:00"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "08:47:00",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1610",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "09:11"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "09:11",
-                    "departureTime": "09:21:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "09:21:00",
-                    "departureTime": "09:28"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "09:28",
-                    "departureTime": "09:35"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "09:35",
-                    "departureTime": "09:43:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "09:43:00",
-                    "departureTime": "09:51:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "09:51:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1610",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "09:22:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "09:22:00",
-                    "departureTime": "09:29:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "09:29:00",
-                    "departureTime": "09:36:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "09:36:00",
-                    "departureTime": "09:44:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "09:44:00",
-                    "departureTime": "09:52:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "09:52:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1010",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "09:38"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "09:38",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1612",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "09:56:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "09:56:00",
-                    "departureTime": "10:06:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "10:06:00",
-                    "departureTime": "10:13:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "10:13:00",
-                    "departureTime": "10:20:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "10:20:00",
-                    "departureTime": "10:28:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "10:28:00",
-                    "departureTime": "10:36:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "10:36:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1612",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "10:07:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "10:07:00",
-                    "departureTime": "10:14:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "10:14:00",
-                    "departureTime": "10:21:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "10:21:00",
-                    "departureTime": "10:29:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "10:29:00",
-                    "departureTime": "10:37:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "10:37:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1012",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "10:23"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "10:23",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": " "
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": " ",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1014",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "11:50"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "11:50",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1016",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "12:16:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "12:16:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1618",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "12:34"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "12:34",
-                    "departureTime": "12:44:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "12:44:00",
-                    "departureTime": "12:51:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "12:51:00",
-                    "departureTime": "12:58:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "12:58:00",
-                    "departureTime": "13:06:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "13:06:00",
-                    "departureTime": "13:14:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "13:14:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1618",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "12:45:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "12:45:00",
-                    "departureTime": "12:52:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "12:52:00",
-                    "departureTime": "12:59:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "12:59:00",
-                    "departureTime": "13:07:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "13:07:00",
-                    "departureTime": "13:15:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "13:15:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1202",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "13:45"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "13:45",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "13:58:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "13:58:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "14:12:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "14:12:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1620",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "14:27"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "14:27",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "13:59:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "13:59:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "14:13:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "14:13:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1620",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "14:27:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "14:27:00",
-                    "departureTime": "14:37:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "14:37:00",
-                    "departureTime": "14:44:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "14:44:00",
-                    "departureTime": "14:51:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "14:51:00",
-                    "departureTime": "14:59:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "14:59:00",
-                    "departureTime": "15:07:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "15:07:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1620",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "14:38:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "14:38:00",
-                    "departureTime": "14:45:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "14:45:00",
-                    "departureTime": "14:52:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "14:52:00",
-                    "departureTime": "15:00:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "15:00:00",
-                    "departureTime": "15:08:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "15:08:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1024",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "15:14"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "15:14",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1622",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "15:42"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "15:42",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1624",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "16:08"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "16:08",
-                    "departureTime": "16:18:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "16:18:00",
-                    "departureTime": "16:25:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "16:25:00",
-                    "departureTime": "16:32:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "16:32:00",
-                    "departureTime": "16:40:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "16:40:00",
-                    "departureTime": "16:48:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "16:48:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1030",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "17:18"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "17:18",
-                    "departureTime": "16:19:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "16:19:00",
-                    "departureTime": "16:26:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "16:26:00",
-                    "departureTime": "16:33:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "16:33:00",
-                    "departureTime": "16:41:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "16:41:00",
-                    "departureTime": "16:49:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "16:49:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1032",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "18:02"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "18:02",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1628",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "18:30"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "18:30",
-                    "departureTime": "18:40:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "18:40:00",
-                    "departureTime": "18:47:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "18:47:00",
-                    "departureTime": "18:53:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "18:53:00",
-                    "departureTime": "19:02:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "19:02:00",
-                    "departureTime": "19:10:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "19:10:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1630",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "18:53"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "18:53",
-                    "departureTime": "18:41:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "18:41:00",
-                    "departureTime": "18:48:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "18:48:00",
-                    "departureTime": "18:54:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "18:54:00",
-                    "departureTime": "19:03:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "19:03:00",
-                    "departureTime": "19:12:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "19:12:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1630",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "18:53:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "18:53:00",
-                    "departureTime": "19:03:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "19:03:00",
-                    "departureTime": "19:10:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "19:10:00",
-                    "departureTime": "19:17:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "19:17:00",
-                    "departureTime": "19:25:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "19:25:00",
-                    "departureTime": "19:33:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "19:33:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1630",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "19:04:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "19:04:00",
-                    "departureTime": "19:11:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "19:11:00",
-                    "departureTime": "19:18:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "19:18:00",
-                    "departureTime": "19:26:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "19:26:00",
-                    "departureTime": "19:34:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "19:34:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1644",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "19:53:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "19:53:00",
-                    "departureTime": "20:03:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "20:03:00",
-                    "departureTime": "20:10:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "20:10:00",
-                    "departureTime": "20:17:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "20:17:00",
-                    "departureTime": "20:25:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "20:25:00",
-                    "departureTime": "20:33:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "20:33:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1644",
-            "isWeekdayOnly": true,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "20:04:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "20:04:00",
-                    "departureTime": "20:11:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "20:11:00",
-                    "departureTime": "20:18:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "20:18:00",
-                    "departureTime": "20:26:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "20:26:00",
-                    "departureTime": "20:34:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "20:34:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1634",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "20:14:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "20:14:00",
-                    "departureTime": "20:24:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "20:24:00",
-                    "departureTime": "20:31:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "20:31:00",
-                    "departureTime": "20:38:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "20:38:00",
-                    "departureTime": "20:46:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "20:46:00",
-                    "departureTime": "20:54:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "20:54:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1634",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "nan",
-                    "departureTime": "20:25:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "20:25:00",
-                    "departureTime": "20:32:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "20:32:00",
-                    "departureTime": "20:39:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "20:39:00",
-                    "departureTime": "20:47:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "20:47:00",
-                    "departureTime": "20:55:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "20:55:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1636",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "20:58"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "20:58",
-                    "departureTime": "21:08:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "21:08:00",
-                    "departureTime": "21:15:00"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "21:15:00",
-                    "departureTime": "21:22:00"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "21:22:00",
-                    "departureTime": "21:30:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "21:30:00",
-                    "departureTime": "21:38:00"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "21:38:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1036",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "21:53"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "21:53",
-                    "departureTime": "21:09:00"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "21:09:00",
-                    "departureTime": " 21:16"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": " 21:16",
-                    "departureTime": " 21:23"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": " 21:23",
-                    "departureTime": "21:31:00"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "21:31:00",
-                    "departureTime": " 21:40"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": " 21:40",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
-        },
-        {
-            "trainNumber": "S1036",
-            "isWeekdayOnly": false,
-            "stops": [
-                {
-                    "stationName": "金山卫",
-                    "arrivalTime": null,
-                    "departureTime": "21:53:00"
-                },
-                {
-                    "stationName": "金山园区",
-                    "arrivalTime": "21:53:00",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "亭林",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "叶榭",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "车墩",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "新桥",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "春申",
-                    "arrivalTime": "nan",
-                    "departureTime": "nan"
-                },
-                {
-                    "stationName": "上海南",
-                    "arrivalTime": "nan",
-                    "departureTime": null
-                }
-            ],
-            "isDirect": false
+          "stationName": "上海南",
+          "arrivalTime": "06:40:00",
+          "departureTime": null
         }
-    ]
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1602",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "05:57:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "05:57:00",
+          "departureTime": "06:04:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "06:04:00",
+          "departureTime": "06:11:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "06:11:00",
+          "departureTime": "06:19:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "06:19:00",
+          "departureTime": "06:27:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "06:27:00",
+          "departureTime": "06:35:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "06:35:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1604",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "06:13:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "06:13:00",
+          "departureTime": "06:23:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "06:23:00",
+          "departureTime": "06:30:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "06:30:00",
+          "departureTime": "06:37:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "06:37:00",
+          "departureTime": "06:45:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "06:45:00",
+          "departureTime": "06:53:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "06:53:00",
+          "departureTime": "07:01:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "07:01:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1604",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "06:24:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "06:24:00",
+          "departureTime": "06:31:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "06:31:00",
+          "departureTime": "06:38:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "06:38:00",
+          "departureTime": "06:46:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "06:46:00",
+          "departureTime": "06:54:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "06:54:00",
+          "departureTime": "07:02:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "07:02:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1004",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "06:58:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "06:58:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1006",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "07:13:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "07:13:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1642",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": "07:35:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "07:35:00",
+          "departureTime": "07:42:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "07:42:00",
+          "departureTime": "07:51:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "07:51:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1642",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": "07:44:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "07:44:00",
+          "departureTime": "07:52:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "07:52:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1640",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "07:41:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "07:41:00",
+          "departureTime": "07:51:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "07:51:00",
+          "departureTime": "07:58:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "07:58:00",
+          "departureTime": "08:05:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "08:05:00",
+          "departureTime": "08:14:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "08:14:00",
+          "departureTime": "08:22:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "08:22:00",
+          "departureTime": "08:31:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "08:31:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1640",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "07:52:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "07:52:00",
+          "departureTime": "07:59:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "07:59:00",
+          "departureTime": "08:07:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "08:07:00",
+          "departureTime": "08:15:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "08:15:00",
+          "departureTime": "08:24:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "08:24:00",
+          "departureTime": "08:32:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "08:32:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1608",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "07:55:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "07:55:00",
+          "departureTime": "08:05:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "08:05:00",
+          "departureTime": "08:12:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "08:12:00",
+          "departureTime": "08:19:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "08:19:00",
+          "departureTime": "08:27:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "08:27:00",
+          "departureTime": "08:35:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "08:35:00",
+          "departureTime": "08:46:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "08:46:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1608",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "08:06:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "08:06:00",
+          "departureTime": "08:13:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "08:13:00",
+          "departureTime": "08:20:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "08:20:00",
+          "departureTime": "08:28:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "08:28:00",
+          "departureTime": "08:37:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "08:37:00",
+          "departureTime": "08:47:00"
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": "08:47:00",
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1610",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "09:11:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "09:11:00",
+          "departureTime": "09:21:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "09:21:00",
+          "departureTime": "09:28:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "09:28:00",
+          "departureTime": "09:35:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "09:35:00",
+          "departureTime": "09:43:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "09:43:00",
+          "departureTime": "09:51:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "09:51:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1610",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "09:22:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "09:22:00",
+          "departureTime": "09:29:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "09:29:00",
+          "departureTime": "09:36:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "09:36:00",
+          "departureTime": "09:44:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "09:44:00",
+          "departureTime": "09:52:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "09:52:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1010",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "09:38:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "09:38:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1612",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "09:56:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "09:56:00",
+          "departureTime": "10:06:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "10:06:00",
+          "departureTime": "10:13:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "10:13:00",
+          "departureTime": "10:20:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "10:20:00",
+          "departureTime": "10:28:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "10:28:00",
+          "departureTime": "10:36:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "10:36:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1612",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "10:07:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "10:07:00",
+          "departureTime": "10:14:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "10:14:00",
+          "departureTime": "10:21:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "10:21:00",
+          "departureTime": "10:29:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "10:29:00",
+          "departureTime": "10:37:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "10:37:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1012",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "10:23:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "10:23:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1014",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "11:50:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "11:50:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1016",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "12:16:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "12:16:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1618",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "12:34:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "12:34:00",
+          "departureTime": "12:44:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "12:44:00",
+          "departureTime": "12:51:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "12:51:00",
+          "departureTime": "12:58:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "12:58:00",
+          "departureTime": "13:06:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "13:06:00",
+          "departureTime": "13:14:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "13:14:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1618",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "12:45:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "12:45:00",
+          "departureTime": "12:52:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "12:52:00",
+          "departureTime": "12:59:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "12:59:00",
+          "departureTime": "13:07:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "13:07:00",
+          "departureTime": "13:15:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "13:15:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1202",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "13:45:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "13:45:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": "13:58:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "13:58:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": "14:12:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "14:12:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1620",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "14:27:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "14:27:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": "13:59:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "13:59:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": "14:13:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "14:13:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1620",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "14:27:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "14:27:00",
+          "departureTime": "14:37:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "14:37:00",
+          "departureTime": "14:44:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "14:44:00",
+          "departureTime": "14:51:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "14:51:00",
+          "departureTime": "14:59:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "14:59:00",
+          "departureTime": "15:07:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "15:07:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1620",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "14:38:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "14:38:00",
+          "departureTime": "14:45:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "14:45:00",
+          "departureTime": "14:52:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "14:52:00",
+          "departureTime": "15:00:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "15:00:00",
+          "departureTime": "15:08:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "15:08:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1024",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "15:14:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "15:14:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1622",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "15:42:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "15:42:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1624",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "16:08:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "16:08:00",
+          "departureTime": "16:18:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "16:18:00",
+          "departureTime": "16:25:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "16:25:00",
+          "departureTime": "16:32:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "16:32:00",
+          "departureTime": "16:40:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "16:40:00",
+          "departureTime": "16:48:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "16:48:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1030",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "17:18:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "17:18:00",
+          "departureTime": "16:19:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "16:19:00",
+          "departureTime": "16:26:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "16:26:00",
+          "departureTime": "16:33:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "16:33:00",
+          "departureTime": "16:41:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "16:41:00",
+          "departureTime": "16:49:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "16:49:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1032",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "18:02:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "18:02:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1628",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "18:30:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "18:30:00",
+          "departureTime": "18:40:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "18:40:00",
+          "departureTime": "18:47:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "18:47:00",
+          "departureTime": "18:53:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "18:53:00",
+          "departureTime": "19:02:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "19:02:00",
+          "departureTime": "19:10:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "19:10:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1630",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "18:53:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "18:53:00",
+          "departureTime": "18:41:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "18:41:00",
+          "departureTime": "18:48:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "18:48:00",
+          "departureTime": "18:54:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "18:54:00",
+          "departureTime": "19:03:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "19:03:00",
+          "departureTime": "19:12:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "19:12:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1630",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "18:53:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "18:53:00",
+          "departureTime": "19:03:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "19:03:00",
+          "departureTime": "19:10:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "19:10:00",
+          "departureTime": "19:17:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "19:17:00",
+          "departureTime": "19:25:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "19:25:00",
+          "departureTime": "19:33:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "19:33:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1630",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "19:04:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "19:04:00",
+          "departureTime": "19:11:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "19:11:00",
+          "departureTime": "19:18:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "19:18:00",
+          "departureTime": "19:26:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "19:26:00",
+          "departureTime": "19:34:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "19:34:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1644",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "19:53:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "19:53:00",
+          "departureTime": "20:03:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "20:03:00",
+          "departureTime": "20:10:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "20:10:00",
+          "departureTime": "20:17:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "20:17:00",
+          "departureTime": "20:25:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "20:25:00",
+          "departureTime": "20:33:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "20:33:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1644",
+      "isWeekdayOnly": true,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "20:04:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "20:04:00",
+          "departureTime": "20:11:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "20:11:00",
+          "departureTime": "20:18:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "20:18:00",
+          "departureTime": "20:26:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "20:26:00",
+          "departureTime": "20:34:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "20:34:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1634",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "20:14:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "20:14:00",
+          "departureTime": "20:24:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "20:24:00",
+          "departureTime": "20:31:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "20:31:00",
+          "departureTime": "20:38:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "20:38:00",
+          "departureTime": "20:46:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "20:46:00",
+          "departureTime": "20:54:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "20:54:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1634",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": null,
+          "departureTime": "20:25:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "20:25:00",
+          "departureTime": "20:32:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "20:32:00",
+          "departureTime": "20:39:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "20:39:00",
+          "departureTime": "20:47:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "20:47:00",
+          "departureTime": "20:55:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "20:55:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1636",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "20:58:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "20:58:00",
+          "departureTime": "21:08:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "21:08:00",
+          "departureTime": "21:15:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "21:15:00",
+          "departureTime": "21:22:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "21:22:00",
+          "departureTime": "21:30:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "21:30:00",
+          "departureTime": "21:38:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "21:38:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1036",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "21:53:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "21:53:00",
+          "departureTime": "21:09:00"
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": "21:09:00",
+          "departureTime": "21:16:00"
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": "21:16:00",
+          "departureTime": "21:23:00"
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": "21:23:00",
+          "departureTime": "21:31:00"
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": "21:31:00",
+          "departureTime": "21:40:00"
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": "21:40:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    },
+    {
+      "trainNumber": "S1036",
+      "isWeekdayOnly": false,
+      "stops": [
+        {
+          "stationName": "金山卫",
+          "arrivalTime": null,
+          "departureTime": "21:53:00"
+        },
+        {
+          "stationName": "金山园区",
+          "arrivalTime": "21:53:00",
+          "departureTime": null
+        },
+        {
+          "stationName": "亭林",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "叶榭",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "车墩",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "新桥",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "春申",
+          "arrivalTime": null,
+          "departureTime": null
+        },
+        {
+          "stationName": "上海南",
+          "arrivalTime": null,
+          "departureTime": null
+        }
+      ],
+      "isDirect": false
+    }
+  ]
 }

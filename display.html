@@ -13,6 +13,9 @@
   </script>
 
   <style>
+    :root {
+      --board-min-width: 1200px;
+    }
     /* 展示页专属样式（复用 styles.css 变量） */
     .board-page {
       display: grid;
@@ -20,6 +23,8 @@
       min-height: 100vh;
       background: var(--bg);
       color: var(--text);
+      min-width: var(--board-min-width);
+      overflow-x: auto;
     }
 
     .board-header {
@@ -281,11 +286,15 @@
 
     .via-grid {
       display: grid;
-      gap: 6px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px 6px;
     }
 
     .via-slot {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
       text-align: center;
       padding: 2px 6px;
       border-radius: 999px;
@@ -297,16 +306,21 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      transition: color .15s ease, border-color .15s ease, background .15s ease, opacity .15s ease;
     }
 
     .via-slot.on {
       color: #c0c7d8;
-      border-color: rgba(192,199,216,0.25);
-      background: rgba(192,199,216,0.06);
+      border-color: rgba(192,199,216,0.35);
+      background: rgba(192,199,216,0.08);
     }
 
     .via-slot.off {
-      visibility: hidden; /* 隐藏内容但保留占位，保持固定格子 */
+      color: transparent;
+      border-style: dashed;
+      border-color: rgba(169,176,192,0.45);
+      background: transparent;
+      opacity: .7;
     }
   </style>
 </head>
